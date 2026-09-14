@@ -1,0 +1,30 @@
+//#pragma once
+#ifndef STUDENT_H
+#define STUDNET_H
+
+#include <iostream>
+
+namespace ParkYeonBin2693117
+{
+    struct student
+    {
+        int id{};
+        int score{};
+  
+    }
+    student inputStudent()
+    {
+        student s{};
+        std::cout<<"Enter id:";
+        std::cin>>s.id;
+        std::cout<<"Enter score: ";
+        std::cin>>s.score;
+        return s;
+    }
+    void printStudent(const student &s); //pass-by reference
+    {
+        std::cout << "Studnet ID: "<<s.id<<std::ends;
+        std::cout << "Score: "<<s.score<<"points\n";
+    }
+}
+#endif
